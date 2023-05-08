@@ -1,124 +1,236 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/8ec719ad-c2f8-4529-b97d-e7561a9eaf33/deploy-status)](https://app.netlify.com/sites/delog-w3layouts/deploys) &nbsp;<a href="https://twitter.com/intent/follow?screen_name=w3layouts">
-  <img src="https://img.shields.io/twitter/follow/w3layouts.svg?label=Follow%20@w3layouts" alt="Follow @w3layouts" />
-</a>
+<p align="center">
+  <a href="https://www.jamify.org">
+    <img alt="Jamify" src="https://avatars0.githubusercontent.com/u/73162720?s=200&v=4" />
+  </a>
+</p>
+<h1 align="center">
+  Jamify's blog starter <br/>
+</h1>
 
-# Delog - Blog for Developer and Designer
-This simple website built with GatsbyJS and Netlify CMS. Deploys on netlify with single click. This Starter is sponsered by [W3Layouts](https://w3layouts.com).
+[![Released under MIT license.](https://badgen.net/github/license/micromatch/micromatch)](https://github.com/styxlab/gatsby-starter-try-ghost/blob/master/LICENSE)
+[![gatsby-starter-try-ghost npm package version.](https://badgen.net/npm/v/gatsby-starter-try-ghost)](https://www.npmjs.org/package/gatsby-starter-try-ghost)
 
-[![Delog - Gatsby Starter Demo](https://w3layouts.com/wp-content/uploads/2020/03/delog.jpg)](https://delog-w3layouts.netlify.com/)
+A [Gatsby](https://www.gatsbyjs.org/) starter for creating blogs from headless [Ghost CMS](https://ghost.org/changelog/jamstack/).
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/W3Layouts/gatsby-starter-delog)
+Turn your Ghost blog into a flaring fast static website. This Gatsby theme is a front-end replacement of the Ghost Handlebars engine featuring an enhanced Ghost Casper look and feel. All content is sourced from a headless Ghost CMS.
 
-Install this starter locally: (assuming you already have [NodeJS and GatsbyJS installed](https://www.gatsbyjs.org/tutorial/part-zero/))
-```bash
-gatsby new gatsby-starter-delog https://github.com/W3Layouts/gatsby-starter-delog
+&nbsp;
+
+## ⚠️ I am no longer actively maintaining this plugin, but PRs for fixes and version updates are most welcome!
+
+&nbsp;
+
+## 🔥 Alternatives
+
+> Tired of `gatsby-config.js`? Check out [Blogody](https://www.blogody.com) for an integrated solution with many more benefits!
+
+> Favor [Next.js](https://nextjs.org/) over Gatsby? Head over to [next-cms-ghost](https://github.com/styxlab/next-cms-ghost)!
+
+&nbsp;
+
+## 🎓 Tutorials
+
+Check out the [Tutorials](https://www.jamify.org) for practical guides on using this project.
+
+&nbsp;
+
+## 🎉 Demo
+
+> Play with the [Demo](https://demo.jamify.org/) to get a first impression.
+
+[![gatsby-starter-try-ghost](https://static.gotsby.org/v1/assets/images/jamify-demo.png)](https://styxlab.github.io)
+
+&nbsp;
+
+## ✨ Features
+
+-   Ghost Casper look and feel
+-   Images with [lazy-loading and blur-up effect](https://using-gatsby-image.gatsbyjs.org/) 🚀 🆕
+-   Infinite Scroll ✨
+-   Featured posts pinned on top 🆕
+-   Sticky navigation headers
+-   Hover on author avatar
+-   Styled 404 page
+-   SEO optimized
+-   Fully responsive
+-   Advanced routing 🆕
+-   Composable and extensible
+-   Incremental build enabled 🚀 🆕
+
+&nbsp;
+
+## 📦 Included Plugins
+
+The following plugins have been included for convenience:
+
+| Name                                                                                                                                  | Version                                                                                                                         | Description                                             |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| [`gatsby-theme-ghost-dark-mode`](https://github.com/styxlab/gatsby-theme-try-ghost/tree/master/packages/gatsby-theme-ghost-dark-mode) | [![version](https://badgen.net/npm/v/gatsby-theme-ghost-dark-mode)](https://www.npmjs.com/package/gatsby-theme-ghost-dark-mode) | Dark mode toggle 🌗                                     |
+| [`gatsby-rehype-ghost-links`](https://github.com/styxlab/gatsby-theme-try-ghost/tree/master/packages/gatsby-rehype-ghost-links)       | [![version](https://badgen.net/npm/v/gatsby-rehype-ghost-links)](https://www.npmjs.com/package/gatsby-rehype-ghost-links)       | Rewrite CMS links from absolute to relative             |
+| [`gatsby-rehype-prismjs`](https://github.com/styxlab/gatsby-theme-try-ghost/tree/master/packages/gatsby-rehype-prismjs)               | [![version](https://badgen.net/npm/v/gatsby-rehype-prismjs)](https://www.npmjs.com/package/gatsby-rehype-prismjs)               | Syntax highlighting with [PrismJS](http://prismjs.com/) |
+| [`gatsby-theme-ghost-members`](https://github.com/styxlab/gatsby-theme-try-ghost/tree/master/packages/gatsby-theme-ghost-members) 🆕  | [![version](https://badgen.net/npm/v/gatsby-theme-ghost-members)](https://www.npmjs.com/package/gatsby-theme-ghost-members)     | Member Subscriptions                                    |
+
+If you don't need them, you can take them out in `gatsby-config.js` and `package.json` which may save you some time during the build process.
+
+&nbsp;
+
+## 🎁 More Plugins
+
+Additional features can be integrated by installing Gatsby themes or plugins. The following plugins have been tested to work with [`gatsby-starter-try-ghost`](https://github.com/styxlab/gatsby-starter-try-ghost):
+
+| Name                                                                                                                                   | Version                                                                                                                             | Description                                                                    |
+| -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| [`gatsby-rehype-inline-images`](https://github.com/styxlab/gatsby-theme-try-ghost/tree/master/packages/gatsby-rehype-inline-images) 🆕 | [![version](https://badgen.net/npm/v/gatsby-rehype-inline-images)](https://www.npmjs.com/package/gatsby-rehype-inline-images)       | Lazy-loading inline images with blur-up                                        |
+| [`gatsby-theme-ghost-contact`](https://github.com/styxlab/gatsby-theme-try-ghost/tree/master/packages/gatsby-theme-ghost-contact)      | [![version](https://badgen.net/npm/v/gatsby-theme-ghost-contact)](https://www.npmjs.com/package/gatsby-theme-ghost-contact)         | Contact page                                                                   |
+| [`gatsby-theme-ghost-commento`](https://github.com/styxlab/gatsby-theme-try-ghost/tree/master/packages/gatsby-theme-ghost-commento)    | [![version](https://badgen.net/npm/v/gatsby-theme-ghost-commento)](https://www.npmjs.com/package/gatsby-theme-ghost-commento)       | Commenting system with [Commento](https://commento.io/)                        |
+| [`gatsby-theme-ghost-toc`](https://github.com/styxlab/gatsby-theme-try-ghost/tree/master/packages/gatsby-theme-ghost-toc) 🆕           | [![version](https://badgen.net/npm/v/gatsby-theme-ghost-toc)](https://www.npmjs.com/package/gatsby-theme-ghost-toc)                 | Table of Contents                                                              |
+| [`gatsby-plugin-ackee-tracker`](https://github.com/burnsy/gatsby-plugin-ackee-tracker)                                                 | [![version](https://badgen.net/npm/v/gatsby-plugin-ackee-tracker)](https://www.npmjs.com/package/gatsby-plugin-ackee-tracker)       | Site tracking with [Ackee](https://github.com/electerious/Ackee)               |
+| [`gatsby-plugin-google-analytics`](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-google-analytics)             | [![version](https://badgen.net/npm/v/gatsby-plugin-google-analytics)](https://www.npmjs.com/package/gatsby-plugin-google-analytics) | Site tracking with [Google Analytics](https://developers.google.com/analytics) |
+
+&nbsp;
+
+## 🏁 Getting Started
+
+1. Install this starter by running
+
+    ```bash
+    gatsby new try-ghost https://github.com/styxlab/gatsby-starter-try-ghost
+    ```
+
+2. Change directory
+
+    ```bash
+    cd try-ghost
+    ```
+
+3. Run
+
+    ```bash
+    yarn develop
+    ```
+
+    and visit your site at `http://localhost:8000`.
+
+&nbsp;
+
+## 💡 Configure
+
+```js
+//siteConfig.js
+module.exports = {
+    // Do not include a trailing slash!
+    siteUrl: `https://your-blog.com`,
+
+    // Maximum number of post shown per page
+    // Infinite Scroll: Initial chunk of posts, subsequent posts are fetched one by one
+    postsPerPage: 3,
+
+    // This allows an alternative site title for meta data for pages.
+    siteTitleMeta: `Gatsby Starter Ghost CMS`,
+
+    // This allows an site description for meta data for pages.
+    siteDescriptionMeta: `Turn your Ghost blog into a flaring fast static site with Gatsby`,
+
+    // Used for App and Offline manifest e.g. Mobile Home Screen
+    shortTitle: `Ghost`,
+    siteIcon: `favicon.png`,
+    backgroundColor: `#e9e9e9`,
+    themeColor: `#15171A`,
+
+    // Include Gatsby images for lazy loading and image optimizations (default: true)
+    gatsbyImages: true,
+
+    // Overwrite navigation menu (default: []), label is case sensitive
+    // overwriteGhostNavigation: [{ label: `Home`, url: `/` }],
+};
 ```
 
-Instructions also available at W3Layouts [Delog Launch Article](https://w3layouts.com/articles/delog-gatsby-starter-netlify-cms/).
+In the configuration shown above, the most important fields to be changed are `siteUrl`, `siteTitleMeta` and `siteDescriptionMeta`. Update at least those to fit your needs.
 
-## Features
-- Built with GatsbyJS and Netlify CMS
-- Option to Add, Edit, Update and Delete posts via Netlify CMS
-- SEO friendly - Option to Add meta description
-- In-built contact form powered by [W3Layouts](https://w3layouts.com) 
-- Comes with dark mode
+&nbsp;
 
----
+## 🔑 Ghost Content API keys
 
-## Documentation
+All content is sourced from a Ghost CMS. By default, content is fetched from the demo location at `https://cms.gotsby.org`. Surely you want to source your own content. There are two ways to make your content keys available. Choose the method according to your build scenario.
 
-* Once you hit "[Deploy to Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/W3Layouts/gatsby-starter-delog)"
-* Connect Github
-* Enter Repository Name
-* And your site starts build process. After the build process your website is live
+### Building with cloud providers
 
-### Changing repositary URL for Netlify CMS access
-You need to change repo URL to your own `repo` at `/static/admin/config.yml`, for example `username/repo-name`
+If you build your project with a cloud provider (e.g. Gatsby, Netlify, Vercel), the best option is to provide the keys with environment variables:
 
-### Creating Github OAuth Client ID
-* Goto Github [Developer Settings](https://github.com/settings/developers)
-* **New OAuth** 
-* Enter Application name
-* Homepage URL as Netlify URL
-* And **Authorization callback URL** to `https://api.netlify.com/auth/done`)
-* Once Client ID and Secret token is generated configure same in [Netlify Access Control](#accessing-netlify-cms-admin) as described.
+| Key                   | Value (example)            |
+| --------------------- | -------------------------- |
+| GHOST_API_URL         | http:\/\/localhost:2368    |
+| GHOST_CONTENT_API_KEY | 9fccdb0e4ea5b572e2e5b92942 |
 
-### Accessing Netlify CMS Admin
-* Goto your Netlify site admin
-* Goto **Access Control** > **OAuth** then **Install Provider** you need to select provider as `Github` as add `Client ID` and `Secret` 
-* Your Netlify CMS is ready. Goto you netlify site URL and append `/admin/`. for example `example.netlify.com/admin/`, You will see login with Github button.
+The place where you can define them depends on the provider, but you usually find the option under the site settings. This avoids publishing keys in a public repository and is most secure.
 
-### Managing Blog Posts in Netlify CMS
-* Once logged in you will find all the blog post listed here.
-* You can create, edit, update and delete like any CMS
+### Building locally
 
-### Editing Meta Data
-Inside you Netlify CMS admin, `Settings > Config` or you can go to `site-meta-data.json`. Here you can edit following details
-* Title
-* Description
-* Site URL
-* Homepage Title
-* Homepage Description
-* To get the Contact form working. you need too add a form at [W3Layouts forms](https://my.w3layouts.com/Forms/). Follow the steps [How to enable W3Layouts Contact form](https://w3layouts.com/articles/introducing-contact-forms-for-static-websites/) instructions to create a form then your contact form is all set.
+If you build locally or on a private network where the build directory is not accessible to the world, you can safely add a new `.ghost.json` file in your base directory with the following JSON structure:
 
-### Add Google Analytics
-Change `trackingId` in `gatsby-config.js` at `gatsby-plugin-google-analytics` plugin
+```bash
 
----
+    {
+        "development": {
+            "apiUrl": "http://localhost:2368",
+            "contentApiKey": "9fccdb0e4ea5b572e2e5b92942"
+        },
+        "production": {
+            "apiUrl": "http://localhost:2368",
+            "contentApiKey": "9fccdb0e4ea5b572e2e5b92942"
+        }
+    }
+```
 
-I hope you will build a great website with Delog. If you like it please spread the word, Feel free to contribute and raise a pull request :)
+This file is part of `.gitignore` to avoid accidentally publishing it to your public repository. Change the `apiUrl` and `contentApiKey` to match your own Ghost CMS Content API keys.
 
-For issues,feedback on enhancement or sharing your new awesome website built with delog. [Create New Issue](https://github.com/W3Layouts/gatsby-starter-delog/issues/new) Here
+&nbsp;
 
----
+## 🤯 Ensure headless mode of Ghost CMS
 
-## Roadmap
-We are maintaining future task in [Github Project](https://github.com/W3Layouts/gatsby-starter-delog/projects/1), even though most changes are instantaious. We try keep them posted here.
+For best SEO results it is strongly recommended to disable the default Ghost Handlebars theme front-end by selecting the _Make this site private_ flag within your Ghost admin settings. This enables password protection in front of the Ghost install and sets `<meta name="robots" content="noindex" />` so your Gatsby front-end becomes the authoritative source for search engines.
 
----
+&nbsp;
 
-## Credits
-- Awesome image used in demo is from [Unsplash](https://unsplash.com)
-- CSS and SVG Icons by [CSS.gg](https://css.gg)
+## 💫 Deploy
 
----
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/styxlab/gatsby-starter-try-ghost)
 
-## Changelog
-All notable changes to this project are listed here.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/styxlab/gatsby-starter-try-ghost)
 
-### [1.6.0] - 2020-05-03
-#### Added
-- Custom 404 page.
-- Site name will be appended in blog posts and contact page.
-- Reordering fields in Netlify CMS for better flow of post creation.
-- Validation for path in Netlify CMS
+&nbsp;
 
-### [1.5.0] - 2020-05-03
-#### Added
-- Settings page in Netlify CMS to customize site meta data.
-- Site meta data is pulled from `site-meta-data.json`. maintained via Netlify CMS
+## 🔧 Update
 
-### [1.4.0] - 2020-05-01
-#### Added
-- `gatsby-plugin-sitemap` Creates a sitemap for your Gatsby site in production.
+It is recommended to install [npm-upgrade](https://www.npmjs.com/package/npm-upgrade) with `sudo npm install npm-upgrade -g`. Change into the base directory and update all packages with:
 
-#### Changed
-- Changelog improvements
-- Comments on `gatsby-config.js`
-- Comments on `static/admin/config.yml`
+```bash
+    npm-upgrade
+```
 
-### [1.3.0] - 2020-04-30
-#### Added
-- `gatsby-plugin-offline` drop-in support for making a GatsbyJS site work offline and more resistant to bad network connections.
-- `gatsby-plugin-manifest` configures GatsbyJS to create a manifest.webmanifest file on every site build
+You will be prompted to update all packages within your `package.json` file. Next, download the new packages:
 
-### [1.2.0] - 2020-04-28
-#### Added 
-- GatsbyJS Increment builds with Netlify deployment
+```bash
+    yarn
+    yarn clean
+```
 
-### [1.1.0] - 2020-04-21
-#### Added 
-- Dark mode compatibitly and toggle for user preference
+The update process is now complete and you can start a new build with `yarn build` (or `yarn develop`).
 
-### [1.0.0] - 2020-03-14
-- Launch of GatsbyJS and Netlify CMS based starter `gatsby-starter-delog`
+&nbsp;
+
+## 💣 Reporting issues
+
+Please report all bugs and issues at [gatsby-theme-try-ghost/issues](https://github.com/styxlab/gatsby-theme-try-ghost/issues) as all development is happening there.
+
+&nbsp;
+
+## 🧐 Disclaimer
+
+This project is not affiliated with [Gatsby](https://www.gatsbyjs.org/) or [Ghost](https://ghost.org/).
+
+&nbsp;
+
+# Copyright & License
+
+Copyright (c) 2020 styxlab - Released under the [MIT license](LICENSE).

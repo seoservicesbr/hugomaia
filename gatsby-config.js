@@ -1,64 +1,107 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
+const path = require(`path`)
+
+let siteConfig
+let ghostConfig
+let mediaConfig
+let routesConfig
+
+try {
+    siteConfig = require(`./siteConfig`)
+} catch (e) {
+    siteConfig = null
+}
+
+try {
+    mediaConfig = require(`./mediaConfig`)
+} catch (e) {
+    mediaConfig = null
+}
+
+try {
+    routesConfig = require(`./routesConfig`)
+} catch (e) {
+    routesConfig = null
+}
+
+try {
+    ghostConfig = require(`./.ghost`)
+} catch (e) {
+    ghostConfig = {
+        development: {
+            apiUrl: process.env.GHOST_API_URL,
+            contentApiKey: process.env.GHOST_CONTENT_API_KEY,
+        },
+        production: {
+            apiUrl: process.env.GHOST_API_URL,
+            contentApiKey: process.env.GHOST_CONTENT_API_KEY,
+        },
+    }
+} finally {
+    const { apiUrl, contentApiKey } = process.env.NODE_ENV === `development` ? ghostConfig.development : ghostConfig.production
+
+    if (!apiUrl || !contentApiKey || contentApiKey.match(/<key>/)) {
+        ghostConfig = null //allow default config to take over
+    }
+}
 
 module.exports = {
-  /* Your site config here */
-  siteMetadata: require("./site-meta-data.json"),
-  plugins: [
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `markdown-pages`,
-        path: `${__dirname}/_data`,
-      },
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [{
-          resolve: `gatsby-remark-prismjs`,
-          options: {
-            classPrefix: "language-",
-            inlineCodeMarker: null,
-            aliases: {},
-            showLineNumbers: false,
-            noInlineHighlight: false,
-          },
+    plugins: [
+        `gatsby-plugin-preact`,
+        `gatsby-plugin-netlify`,
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: path.join(__dirname, `src`, `images`),
+                name: `images`,
+            },
         },
         {
-          resolve: 'gatsby-remark-emojis',
-        }],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        // The property ID; the tracking code won't be generated without it. replace with yours
-        trackingId: "UA-164743872-1",
-        head: true,
-      }
-    },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Delog GatbsyJS Starter`,
-        short_name: `Delog`,
-        start_url: `/`,
-        background_color: `#fff`,
-        theme_color: `#381696`,
-        display: `standalone`,
-        icon: "src/images/icon.png",
-      },
-    },
-    `gatsby-plugin-sass`, 
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-netlify-cms`,
-    'gatsby-plugin-dark-mode',
-    // siteURL is a must for sitemap generation
-    `gatsby-plugin-sitemap`,
-    `gatsby-plugin-offline`,
-  ],
+            resolve: `gatsby-theme-try-ghost`,
+            options: {
+                ghostConfig: ghostConfig,
+                siteConfig: siteConfig,
+                mediaConfig: mediaConfig,
+                routes: routesConfig,
+            },
+        },
+        {
+            resolve: `gatsby-theme-ghost-dark-mode`,
+            options: {
+                // Set to true if you want your theme to default to dark mode (default: false)
+                // Note that this setting has an effect only, if
+                //    1. The user has not changed the dark mode
+                //    2. Dark mode is not reported from OS
+                defaultModeDark: false,
+                // If you want the defaultModeDark setting to take precedence
+                // over the mode reported from OS, set this to true (default: false)
+                overrideOS: false,
+            },
+        },
+        {
+            resolve: `gatsby-theme-ghost-members`,
+        },
+        {
+            resolve: `gatsby-transformer-rehype`,
+            options: {
+                filter: node => (
+                    node.internal.type === `GhostPost` ||
+                    node.internal.type === `GhostPage`
+                ),
+                plugins: [
+                    {
+                        resolve: `gatsby-rehype-ghost-links`,
+                    },
+                    {
+                        resolve: `gatsby-rehype-prismjs`,
+                    },
+                ],
+            },
+        },
+        {
+            resolve: `gatsby-plugin-gatsby-cloud`,
+        },        
+        // this (optional) plugin enables Progressive Web App + Offline functionality
+        // This plugin is currently causing issues: https://github.com/gatsbyjs/gatsby/issues/25360
+        //`gatsby-plugin-offline`,
+    ],
 }
